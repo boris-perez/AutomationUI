@@ -12,6 +12,10 @@ public class Common {
         Click.on(driver, item);
     }
 
+    public static void homePage(WebDriver driver) {
+        Click.on(driver, CommonUI.homeButton);
+    }
+
     public static String verifyPrice(WebDriver driver) {
         return GetText.on(driver, CommonUI.price);
     }
