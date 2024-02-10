@@ -11,7 +11,12 @@ public class PhonesTest extends BaseTest {
         Phones.selectProduct(webDriver);
         Common.selectItem(webDriver, PhonesUI.htcOneM9);
         String price = Common.verifyPrice(webDriver);
-        System.out.println("El precio del HTC ONE M9 es: " + price);
+        if (!price.isEmpty()) {
+            System.out.println("La prueba fue exitosa");
+            System.out.println("El precio del HTC ONE M9 es: " + price);
+        } else {
+            System.out.println("La prueba fue fallida");
+        }
     }
 
 }

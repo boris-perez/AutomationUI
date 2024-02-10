@@ -11,7 +11,12 @@ public class LaptopsTest extends BaseTest {
         Laptops.selectProduct(webDriver);
         Common.selectItem(webDriver, LaptopsUI.macBookAir);
         String price = Common.verifyPrice(webDriver);
-        System.out.println("El precio del Mac Book Air es: " + price);
+        if (!price.isEmpty()) {
+            System.out.println("La prueba fue exitosa");
+            System.out.println("El precio del Mac Book Air es: " + price);
+        } else {
+            System.out.println("La prueba fue fallida");
+        }
     }
 
     @Test
@@ -19,7 +24,12 @@ public class LaptopsTest extends BaseTest {
         Laptops.selectProduct(webDriver);
         Common.selectItem(webDriver, LaptopsUI.macBookPro);
         String price = Common.verifyPrice(webDriver);
-        System.out.println("El precio del Mac Book Pro es: " + price);
+        if (!price.isEmpty()) {
+            System.out.println("La prueba fue exitosa");
+            System.out.println("El precio del Mac Book Pro es: " + price);
+        } else {
+            System.out.println("La prueba fue fallida");
+        }
     }
 
     @Test
@@ -27,6 +37,11 @@ public class LaptopsTest extends BaseTest {
         Laptops.selectProduct(webDriver);
         Common.selectItem(webDriver, LaptopsUI.macBookAir);
         String price = Common.verifyPrice(webDriver);
-        System.out.println("El precio del Dell I7 es: " + price);
+        if (!price.isEmpty()) {
+            System.out.println("La prueba fue exitosa");
+            System.out.println("El precio del Dell I7 es: " + price);
+        } else {
+            System.out.println("La prueba fue fallida");
+        }
     }
 }

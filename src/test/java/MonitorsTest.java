@@ -14,7 +14,12 @@ public class MonitorsTest extends BaseTest {
         Monitors.selectProduct(webDriver);
         Common.selectItem(webDriver, MonitorsUI.asusFullDH);
         String price = Common.verifyPrice(webDriver);
-        System.out.println("El precio del Assus Full HD es: " + price);
+        if (!price.isEmpty()) {
+            System.out.println("La prueba fue exitosa");
+            System.out.println("El precio del Assus Full HD es: " + price);
+        } else {
+            System.out.println("La prueba fue fallida");
+        }
     }
 
 
